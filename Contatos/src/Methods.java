@@ -85,4 +85,19 @@ public class Methods {
         }
         System.out.println("Contato não encontrado na agenda!");
     }
+
+
+    public static void sort(ArrayList<Agenda> dados) {
+
+
+        for (int i = 0; i < dados.size() - 1; i++) {
+            for (int j = 0; j < dados.size() - 1 - i; j++) {
+                if (dados.get(j).name.compareTo(dados.get(j + 1).name) > 0) {
+                Agenda temp = dados.get(j);
+                dados.set(j, dados.get(j + 1));
+                dados.set(j + 1, temp);
+                }
+            }
+        }
+    }
 }
