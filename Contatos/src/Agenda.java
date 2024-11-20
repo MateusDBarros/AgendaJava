@@ -13,9 +13,7 @@ public class Agenda{
     }
 
     static public void showData(ArrayList<Agenda> dados) {
-
-
-
+        Methods.sort(dados);
         for (Agenda i : dados) {
             System.out.printf("Nome:\t %s\nTelefone:\t %s\nIdade:\t %d", i.name, i.phone, i.age);
             System.out.println("\n ------------------------------------ \n");
